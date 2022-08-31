@@ -381,6 +381,7 @@
   /* about */
   .about {
     margin-bottom: 71px;
+    padding-top: 81px;
   }
 
   /* gallery */
@@ -962,6 +963,7 @@
   .hero {
     padding: 0 36px;
     text-align: center;
+    top: 0;
   }
 
   .hero__content {

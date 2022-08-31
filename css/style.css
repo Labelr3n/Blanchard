@@ -1,7 +1,6 @@
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 *{
@@ -553,13 +552,14 @@ input[type='search']::-webkit-search-results-decoration {
   position: relative;
   max-width: 1920px;
   z-index: 10;
+  top: -70px;
 }
 
 .hero__content {
   position: relative;
   margin: 0;
   padding-left: 110px;
-  padding-top: 63px;
+  padding-top: 130px;
   z-index: 9;
 }
 
@@ -599,7 +599,7 @@ input[type='search']::-webkit-search-results-decoration {
 .slider-wrapper {
   position: absolute;
   z-index: 1;
-  top: -170px;
+  top: 0;
   left: 0;
   width: 100%;
   height: -webkit-fill-available;
@@ -670,7 +670,7 @@ input[type='search']::-webkit-search-results-decoration {
 .about {
   max-width: 1703px;
   margin-bottom: 74px;
-  padding-top: 80px;
+  padding-top: 14px;
 }
 
 .about__block {
@@ -689,7 +689,7 @@ input[type='search']::-webkit-search-results-decoration {
 
 .gallery__block {
   max-width: 1700px;
-  padding-top: 80px;
+  padding-top: 78px;
   padding-bottom: 74px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -729,7 +729,7 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .choices:last-child {
-  margin-bottom: 178px;
+  margin-bottom: 181px;
 }
 
 .choices__inner {
@@ -1128,7 +1128,7 @@ input[type='search']::-webkit-search-results-decoration {
   font-size: 12px;
   line-height: 16px;
   color: var(--gray999);
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .catalog__painter-info.active {
@@ -2698,7 +2698,7 @@ input[type='search']::-webkit-search-results-decoration {
 
 @-moz-document url-prefix() {
   .slider-wrapper {
-    height: 127%;
+    height: 100%;
   }
 }
 
@@ -2804,4 +2804,37 @@ input[type='search']::-webkit-search-results-decoration {
   font-size: 16px;
   line-height: 22px;
   color: var(--gray333);
+}
+
+.contacts__btn {
+  position: relative;
+}
+
+.contacts__btn::before {
+  position: absolute;
+  content: "";
+  border: 2px solid var(--purpleC2);
+  top: -5px;
+  bottom: -5px;
+  right: -5px;
+  left: -5px;
+  border-radius: 100px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.contacts__btn:focus::before {
+  opacity: 1;
+}
+
+.contacts__btn:hover {
+  background: var(--purple9D);
+  color: var(--white);
+  transition: all 0.3s ease-in-out;
+}
+
+.contacts__btn:active {
+  outline: 3px solid var(--purpleD1);
+  outline-offset: -3px;
+  transition: all 0.3s ease-in-out;
 }
